@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/Users/apple/Desktop/Calls/IMKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/rc_ic_bubble_right.9.png",
-        "source": "/Users/apple/Desktop/Calls/IMKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/rc_ic_bubble_right.9.png"
-    },
-    {
         "merged": "/Users/apple/Desktop/Calls/IMKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/rc_ic_star.png",
         "source": "/Users/apple/Desktop/Calls/IMKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/rc_ic_star.png"
+    },
+    {
+        "merged": "/Users/apple/Desktop/Calls/IMKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/rc_ic_bubble_right.9.png",
+        "source": "/Users/apple/Desktop/Calls/IMKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/rc_ic_bubble_right.9.png"
     },
     {
         "merged": "/Users/apple/Desktop/Calls/IMKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/rc_ic_bubble_no_right.9.png",
@@ -44,12 +44,12 @@
         "source": "/Users/apple/Desktop/Calls/IMKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/rc_ic_bubble_right_file.9.png"
     },
     {
-        "merged": "/Users/apple/Desktop/Calls/IMKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/rc_ic_phone_normal.png",
-        "source": "/Users/apple/Desktop/Calls/IMKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/rc_ic_phone_normal.png"
-    },
-    {
         "merged": "/Users/apple/Desktop/Calls/IMKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/rc_ic_bubble_left_file.9.png",
         "source": "/Users/apple/Desktop/Calls/IMKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/rc_ic_bubble_left_file.9.png"
+    },
+    {
+        "merged": "/Users/apple/Desktop/Calls/IMKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/rc_ic_phone_normal.png",
+        "source": "/Users/apple/Desktop/Calls/IMKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/rc_ic_phone_normal.png"
     },
     {
         "merged": "/Users/apple/Desktop/Calls/IMKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/rc_praise_hover.png",

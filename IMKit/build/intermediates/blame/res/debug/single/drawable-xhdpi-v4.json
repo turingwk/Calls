@@ -44,12 +44,12 @@
         "source": "/Users/apple/Desktop/Calls/IMKit/src/main/res/drawable-xhdpi/rc_default_portrait.png"
     },
     {
-        "merged": "/Users/apple/Desktop/Calls/IMKit/build/intermediates/res/merged/debug/drawable-xhdpi-v4/rc_ic_star.png",
-        "source": "/Users/apple/Desktop/Calls/IMKit/src/main/res/drawable-xhdpi/rc_ic_star.png"
-    },
-    {
         "merged": "/Users/apple/Desktop/Calls/IMKit/build/intermediates/res/merged/debug/drawable-xhdpi-v4/rc_unread_count_bg.png",
         "source": "/Users/apple/Desktop/Calls/IMKit/src/main/res/drawable-xhdpi/rc_unread_count_bg.png"
+    },
+    {
+        "merged": "/Users/apple/Desktop/Calls/IMKit/build/intermediates/res/merged/debug/drawable-xhdpi-v4/rc_ic_star.png",
+        "source": "/Users/apple/Desktop/Calls/IMKit/src/main/res/drawable-xhdpi/rc_ic_star.png"
     },
     {
         "merged": "/Users/apple/Desktop/Calls/IMKit/build/intermediates/res/merged/debug/drawable-xhdpi-v4/rc_ic_bubble_left.9.png",
@@ -68,12 +68,12 @@
         "source": "/Users/apple/Desktop/Calls/IMKit/src/main/res/drawable-xhdpi/rc_pb_file_download_progress_background.9.png"
     },
     {
-        "merged": "/Users/apple/Desktop/Calls/IMKit/build/intermediates/res/merged/debug/drawable-xhdpi-v4/rc_ic_phone_pressed.png",
-        "source": "/Users/apple/Desktop/Calls/IMKit/src/main/res/drawable-xhdpi/rc_ic_phone_pressed.png"
-    },
-    {
         "merged": "/Users/apple/Desktop/Calls/IMKit/build/intermediates/res/merged/debug/drawable-xhdpi-v4/rc_ic_bubble_right_file.9.png",
         "source": "/Users/apple/Desktop/Calls/IMKit/src/main/res/drawable-xhdpi/rc_ic_bubble_right_file.9.png"
+    },
+    {
+        "merged": "/Users/apple/Desktop/Calls/IMKit/build/intermediates/res/merged/debug/drawable-xhdpi-v4/rc_ic_phone_pressed.png",
+        "source": "/Users/apple/Desktop/Calls/IMKit/src/main/res/drawable-xhdpi/rc_ic_phone_pressed.png"
     },
     {
         "merged": "/Users/apple/Desktop/Calls/IMKit/build/intermediates/res/merged/debug/drawable-xhdpi-v4/rc_ic_phone_normal.png",

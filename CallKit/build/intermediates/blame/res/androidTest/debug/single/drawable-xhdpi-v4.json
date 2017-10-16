@@ -8,36 +8,36 @@
         "source": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/rc_voip_handfree_hover.png"
     },
     {
-        "merged": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/rc_voip_mute.png",
-        "source": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/rc_voip_mute.png"
-    },
-    {
         "merged": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/rc_voip_camera_hover.png",
         "source": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/rc_voip_camera_hover.png"
     },
     {
-        "merged": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/rc_cs_star.png",
-        "source": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/exploded-aar/Calls/IMKit/unspecified/res/drawable-xhdpi-v4/rc_cs_star.png"
+        "merged": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/rc_voip_mute.png",
+        "source": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/rc_voip_mute.png"
     },
     {
         "merged": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/rc_ic_bubble_no_right.9.png",
         "source": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/exploded-aar/Calls/IMKit/unspecified/res/drawable-xhdpi-v4/rc_ic_bubble_no_right.9.png"
     },
     {
-        "merged": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/rc_ic_bubble_right_file.9.png",
-        "source": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/exploded-aar/Calls/IMKit/unspecified/res/drawable-xhdpi-v4/rc_ic_bubble_right_file.9.png"
+        "merged": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/rc_cs_star.png",
+        "source": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/exploded-aar/Calls/IMKit/unspecified/res/drawable-xhdpi-v4/rc_cs_star.png"
     },
     {
         "merged": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/rc_voip_hang_up.png",
         "source": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/rc_voip_hang_up.png"
     },
     {
-        "merged": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/rc_voip_icon_checkbox_checked.png",
-        "source": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/rc_voip_icon_checkbox_checked.png"
+        "merged": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/rc_ic_bubble_right_file.9.png",
+        "source": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/exploded-aar/Calls/IMKit/unspecified/res/drawable-xhdpi-v4/rc_ic_bubble_right_file.9.png"
     },
     {
         "merged": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/rc_voip_video_left.png",
         "source": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/rc_voip_video_left.png"
+    },
+    {
+        "merged": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/rc_voip_icon_checkbox_checked.png",
+        "source": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/rc_voip_icon_checkbox_checked.png"
     },
     {
         "merged": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/rc_voip_icon_checkbox_hover.png",
@@ -200,11 +200,11 @@
         "source": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/exploded-aar/Calls/IMKit/unspecified/res/drawable-xhdpi-v4/rc_public_service_menu_bg.9.png"
     },
     {
-        "merged": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/rc_voip_mute_hover.png",
-        "source": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/rc_voip_mute_hover.png"
-    },
-    {
         "merged": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/rc_voip_disable_camera.png",
         "source": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/rc_voip_disable_camera.png"
+    },
+    {
+        "merged": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/rc_voip_mute_hover.png",
+        "source": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/rc_voip_mute_hover.png"
     }
 ]

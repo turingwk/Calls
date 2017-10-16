@@ -82,7 +82,6 @@ public class RongCallModule implements IExternalModule {
             startVoIPActivity(mContext, mCallSession, false);
         }
     }
-
     @Override
     public List<IPluginModule> getPlugins(Conversation.ConversationType conversationType) {
         List<IPluginModule> pluginModules = new ArrayList<>();

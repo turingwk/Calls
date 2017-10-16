@@ -72,7 +72,6 @@ import io.rong.imkit.model.Event.RemoveMemberFromDiscussionEvent;
 import io.rong.imkit.model.Event.SyncGroupEvent;
 import io.rong.imkit.model.Event.SyncReadStatusEvent;
 import io.rong.imkit.model.GroupUserInfo;
-import io.rong.imkit.model.UIConversation;
 import io.rong.imkit.notification.MessageNotificationManager;
 import io.rong.imkit.userInfoCache.RongUserInfoManager;
 import io.rong.imkit.utils.SystemUtils;
@@ -230,7 +229,6 @@ public class RongIM {
             registerMessageTemplate(new UnknownMessageItemProvider());
             registerMessageTemplate(new CSPullLeaveMsgItemProvider());
             RongExtensionManager.init(context, RongIM.SingletonHolder.sRongIM.mAppKey);
-            RongExtensionManager.getInstance().registerExtensionModule(new DefaultExtensionModule());
             InternalModuleManager.init(context);
             InternalModuleManager.getInstance().onInitialized(RongIM.SingletonHolder.sRongIM.mAppKey);
         }
@@ -512,13 +510,6 @@ public class RongIM {
     public static void setConversationBehaviorListener(RongIM.ConversationBehaviorListener listener) {
         if(RongContext.getInstance() != null) {
             RongContext.getInstance().setConversationBehaviorListener(listener);
-        }
-
-    }
-
-    public static void setConversationListBehaviorListener(RongIM.ConversationListBehaviorListener listener) {
-        if(RongContext.getInstance() != null) {
-            RongContext.getInstance().setConversationListBehaviorListener(listener);
         }
 
     }
@@ -2381,13 +2372,6 @@ public class RongIM {
         RongIMClient.setStatisticDomain(domain);
     }
 
-    public void setPublicServiceMenuClickListener(IPublicServiceMenuClickListener menuClickListener) {
-        if(RongContext.getInstance() != null) {
-            RongContext.getInstance().setPublicServiceMenuClickListener(menuClickListener);
-        }
-
-    }
-
     /** @deprecated */
     @Deprecated
     public void recallMessage(Message message) {
@@ -2666,16 +2650,6 @@ public class RongIM {
 
     public interface UserInfoProvider {
         UserInfo getUserInfo(String var1);
-    }
-
-    public interface ConversationListBehaviorListener {
-        boolean onConversationPortraitClick(Context var1, ConversationType var2, String var3);
-
-        boolean onConversationPortraitLongClick(Context var1, ConversationType var2, String var3);
-
-        boolean onConversationLongClick(Context var1, View var2, UIConversation var3);
-
-        boolean onConversationClick(Context var1, View var2, UIConversation var3);
     }
 
     public interface ConversationBehaviorListener {

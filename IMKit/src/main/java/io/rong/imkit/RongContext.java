@@ -32,7 +32,6 @@ import io.rong.imageloader.core.ImageLoaderConfiguration.Builder;
 import io.rong.imageloader.utils.L;
 import io.rong.imageloader.utils.StorageUtils;
 import io.rong.imkit.RongIM.ConversationBehaviorListener;
-import io.rong.imkit.RongIM.ConversationListBehaviorListener;
 import io.rong.imkit.RongIM.GroupInfoProvider;
 import io.rong.imkit.RongIM.GroupUserInfoProvider;
 import io.rong.imkit.RongIM.LocationProvider;
@@ -80,12 +79,10 @@ public class RongContext extends ContextWrapper {
     private EventBus mBus = EventBus.getDefault();
     private ExecutorService executorService;
     private ConversationBehaviorListener mConversationBehaviorListener;
-    private ConversationListBehaviorListener mConversationListBehaviorListener;
     private PublicServiceBehaviorListener mPublicServiceBehaviorListener;
     private OnSelectMemberListener mMemberSelectListener;
     private OnSendMessageListener mOnSendMessageListener;
     private RequestPermissionsListener mRequestPermissionsListener;
-    private IPublicServiceMenuClickListener mPublicServiceMenuClickListener;
     private UserInfoProvider mUserInfoProvider;
     private GroupInfoProvider mGroupProvider;
     private GroupUserInfoProvider mGroupUserInfoProvider;
@@ -433,22 +430,6 @@ public class RongContext extends ContextWrapper {
 
     public boolean getUserInfoAttachedState() {
         return this.isUserInfoAttached;
-    }
-
-    public void setPublicServiceMenuClickListener(IPublicServiceMenuClickListener menuClickListener) {
-        this.mPublicServiceMenuClickListener = menuClickListener;
-    }
-
-    public IPublicServiceMenuClickListener getPublicServiceMenuClickListener() {
-        return this.mPublicServiceMenuClickListener;
-    }
-
-    public ConversationListBehaviorListener getConversationListBehaviorListener() {
-        return this.mConversationListBehaviorListener;
-    }
-
-    public void setConversationListBehaviorListener(ConversationListBehaviorListener conversationListBehaviorListener) {
-        this.mConversationListBehaviorListener = conversationListBehaviorListener;
     }
 
     public void setRequestPermissionListener(RequestPermissionsListener listener) {
