@@ -1,0 +1,78 @@
+[
+    {
+        "merged": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/res/merged/debug/layout/rc_voip_float_box.xml",
+        "source": "/Users/apple/Desktop/Calls/CallKit/src/main/res/layout/rc_voip_float_box.xml"
+    },
+    {
+        "merged": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/res/merged/debug/layout/rc_voip_call_bottom_connected_button_layout.xml",
+        "source": "/Users/apple/Desktop/Calls/CallKit/src/main/res/layout/rc_voip_call_bottom_connected_button_layout.xml"
+    },
+    {
+        "merged": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/res/merged/debug/layout/rc_voip_item_incoming_maudio.xml",
+        "source": "/Users/apple/Desktop/Calls/CallKit/src/main/res/layout/rc_voip_item_incoming_maudio.xml"
+    },
+    {
+        "merged": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/res/merged/debug/layout/rc_voip_activity_select_member.xml",
+        "source": "/Users/apple/Desktop/Calls/CallKit/src/main/res/layout/rc_voip_activity_select_member.xml"
+    },
+    {
+        "merged": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/res/merged/debug/layout/rc_voip_video_call_user_info.xml",
+        "source": "/Users/apple/Desktop/Calls/CallKit/src/main/res/layout/rc_voip_video_call_user_info.xml"
+    },
+    {
+        "merged": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/res/merged/debug/layout/rc_item_text_message.xml",
+        "source": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/exploded-aar/Calls/IMKit/unspecified/res/layout/rc_item_text_message.xml"
+    },
+    {
+        "merged": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/res/merged/debug/layout/rc_voip_multi_video_call.xml",
+        "source": "/Users/apple/Desktop/Calls/CallKit/src/main/res/layout/rc_voip_multi_video_call.xml"
+    },
+    {
+        "merged": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/res/merged/debug/layout/rc_voip_viewlet_remote_user.xml",
+        "source": "/Users/apple/Desktop/Calls/CallKit/src/main/res/layout/rc_voip_viewlet_remote_user.xml"
+    },
+    {
+        "merged": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/res/merged/debug/layout/rc_voip_activity_single_call.xml",
+        "source": "/Users/apple/Desktop/Calls/CallKit/src/main/res/layout/rc_voip_activity_single_call.xml"
+    },
+    {
+        "merged": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/res/merged/debug/layout/rc_voip_user_info.xml",
+        "source": "/Users/apple/Desktop/Calls/CallKit/src/main/res/layout/rc_voip_user_info.xml"
+    },
+    {
+        "merged": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/res/merged/debug/layout/rc_voip_contact_container.xml",
+        "source": "/Users/apple/Desktop/Calls/CallKit/src/main/res/layout/rc_voip_contact_container.xml"
+    },
+    {
+        "merged": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/res/merged/debug/layout/rc_voip_multi_video_top_view.xml",
+        "source": "/Users/apple/Desktop/Calls/CallKit/src/main/res/layout/rc_voip_multi_video_top_view.xml"
+    },
+    {
+        "merged": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/res/merged/debug/layout/rc_voip_listitem_select_member.xml",
+        "source": "/Users/apple/Desktop/Calls/CallKit/src/main/res/layout/rc_voip_listitem_select_member.xml"
+    },
+    {
+        "merged": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/res/merged/debug/layout/rc_voip_multi_video_calling_bottom_view.xml",
+        "source": "/Users/apple/Desktop/Calls/CallKit/src/main/res/layout/rc_voip_multi_video_calling_bottom_view.xml"
+    },
+    {
+        "merged": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/res/merged/debug/layout/rc_voip_item_outgoing_maudio.xml",
+        "source": "/Users/apple/Desktop/Calls/CallKit/src/main/res/layout/rc_voip_item_outgoing_maudio.xml"
+    },
+    {
+        "merged": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/res/merged/debug/layout/rc_voip_call_bottom_incoming_button_layout.xml",
+        "source": "/Users/apple/Desktop/Calls/CallKit/src/main/res/layout/rc_voip_call_bottom_incoming_button_layout.xml"
+    },
+    {
+        "merged": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/res/merged/debug/layout/rc_voip_ac_muti_audio.xml",
+        "source": "/Users/apple/Desktop/Calls/CallKit/src/main/res/layout/rc_voip_ac_muti_audio.xml"
+    },
+    {
+        "merged": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/res/merged/debug/layout/rc_voip_audio_call_user_info.xml",
+        "source": "/Users/apple/Desktop/Calls/CallKit/src/main/res/layout/rc_voip_audio_call_user_info.xml"
+    },
+    {
+        "merged": "/Users/apple/Desktop/Calls/CallKit/build/intermediates/res/merged/debug/layout/rc_voip_user_portrait.xml",
+        "source": "/Users/apple/Desktop/Calls/CallKit/src/main/res/layout/rc_voip_user_portrait.xml"
+    }
+]
