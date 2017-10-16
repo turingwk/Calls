@@ -5,9 +5,9 @@
 /.idea/libraries
 .DS_Store
 /build
-/IMKit/build
-/IMLib/build
-/CallKit/build
-/CallLib/build
+/IMKit/build/
+/IMLib/build/
+/CallKit/build/
+/CallLib/build/
 /captures
 .externalNativeBuild
