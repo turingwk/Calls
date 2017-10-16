@@ -204,12 +204,12 @@
         "source": "/Users/apple/Desktop/Calls/IMKit/src/main/res/drawable-xhdpi/rc_ic_phone_pressed.png"
     },
     {
-        "merged": "/Users/apple/Desktop/Calls/IMKit/build/intermediates/res/merged/debug/drawable-xhdpi-v4/u1f60a.png",
-        "source": "/Users/apple/Desktop/Calls/IMKit/src/main/res/drawable-xhdpi/u1f60a.png"
-    },
-    {
         "merged": "/Users/apple/Desktop/Calls/IMKit/build/intermediates/res/merged/debug/drawable-xhdpi-v4/u1f64f.png",
         "source": "/Users/apple/Desktop/Calls/IMKit/src/main/res/drawable-xhdpi/u1f64f.png"
+    },
+    {
+        "merged": "/Users/apple/Desktop/Calls/IMKit/build/intermediates/res/merged/debug/drawable-xhdpi-v4/u1f60a.png",
+        "source": "/Users/apple/Desktop/Calls/IMKit/src/main/res/drawable-xhdpi/u1f60a.png"
     },
     {
         "merged": "/Users/apple/Desktop/Calls/IMKit/build/intermediates/res/merged/debug/drawable-xhdpi-v4/u270a.png",

@@ -204,7 +204,6 @@ public class RongIM {
             RLog.i(TAG, "init : " + current);
             mContext = context;
             RongContext.init(context);
-            RongMessageItemLongClickActionManager.getInstance().init(context);
             initListener();
             if(TextUtils.isEmpty(RongIM.SingletonHolder.sRongIM.mAppKey)) {
                 try {
