@@ -85,15 +85,15 @@ public class AudioPlugin implements IPluginModule {
             RongIM.getInstance().getDiscussion(targetId, new RongIMClient.ResultCallback<Discussion>() {
                 @Override
                 public void onSuccess(Discussion discussion) {
-                    Intent intent = new Intent(context, CallSelectMemberActivity.class);
-                    allMembers = (ArrayList<String>) discussion.getMemberIdList();
-                    intent.putStringArrayListExtra("allMembers", allMembers);
-                    String myId = RongIMClient.getInstance().getCurrentUserId();
-                    ArrayList<String> invited = new ArrayList<>();
-                    invited.add(myId);
-                    intent.putStringArrayListExtra("invitedMembers", invited);
-                    intent.putExtra("mediaType", RongCallCommon.CallMediaType.AUDIO.getValue());
-                    extension.startActivityForPluginResult(intent, 110, AudioPlugin.this);
+//                    Intent intent = new Intent(context, CallSelectMemberActivity.class);
+//                    allMembers = (ArrayList<String>) discussion.getMemberIdList();
+//                    intent.putStringArrayListExtra("allMembers", allMembers);
+//                    String myId = RongIMClient.getInstance().getCurrentUserId();
+//                    ArrayList<String> invited = new ArrayList<>();
+//                    invited.add(myId);
+//                    intent.putStringArrayListExtra("invitedMembers", invited);
+//                    intent.putExtra("mediaType", RongCallCommon.CallMediaType.AUDIO.getValue());
+//                    extension.startActivityForPluginResult(intent, 110, AudioPlugin.this);
                 }
 
                 @Override
@@ -102,14 +102,14 @@ public class AudioPlugin implements IPluginModule {
                 }
             });
         } else if (conversationType.equals(Conversation.ConversationType.GROUP)) {
-            Intent intent = new Intent(context, CallSelectMemberActivity.class);
-            String myId = RongIMClient.getInstance().getCurrentUserId();
-            ArrayList<String> invited = new ArrayList<>();
-            invited.add(myId);
-            intent.putStringArrayListExtra("invitedMembers", invited);
-            intent.putExtra("groupId", targetId);
-            intent.putExtra("mediaType", RongCallCommon.CallMediaType.AUDIO.getValue());
-            extension.startActivityForPluginResult(intent, 110, this);
+//            Intent intent = new Intent(context, CallSelectMemberActivity.class);
+//            String myId = RongIMClient.getInstance().getCurrentUserId();
+//            ArrayList<String> invited = new ArrayList<>();
+//            invited.add(myId);
+//            intent.putStringArrayListExtra("invitedMembers", invited);
+//            intent.putExtra("groupId", targetId);
+//            intent.putExtra("mediaType", RongCallCommon.CallMediaType.AUDIO.getValue());
+//            extension.startActivityForPluginResult(intent, 110, this);
         }
     }
 

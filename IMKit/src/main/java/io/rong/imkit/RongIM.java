@@ -38,7 +38,6 @@ import io.rong.imkit.R.bool;
 import io.rong.imkit.R.string;
 import io.rong.imkit.manager.AudioRecordManager;
 import io.rong.imkit.manager.InternalModuleManager;
-import io.rong.imkit.mention.RongMentionManager;
 import io.rong.imkit.model.ConversationKey;
 import io.rong.imkit.model.Event.AddMemberToDiscussionEvent;
 import io.rong.imkit.model.Event.AddToBlacklistEvent;
@@ -447,10 +446,6 @@ public class RongIM {
             notificationQuiteHoursConfigured = false;
             MessageNotificationManager.getInstance().clearNotificationQuietHours();
         }
-    }
-
-    public void setGroupMembersProvider(RongIM.IGroupMembersProvider groupMembersProvider) {
-        RongMentionManager.getInstance().setGroupMembersProvider(groupMembersProvider);
     }
 
     public static void setLocationProvider(RongIM.LocationProvider locationProvider) {

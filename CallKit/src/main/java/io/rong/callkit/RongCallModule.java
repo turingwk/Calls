@@ -87,7 +87,7 @@ public class RongCallModule implements IExternalModule {
     public List<IPluginModule> getPlugins(Conversation.ConversationType conversationType) {
         List<IPluginModule> pluginModules = new ArrayList<>();
         pluginModules.add(new AudioPlugin());
-        pluginModules.add(new VideoPlugin());
+//        pluginModules.add(new VideoPlugin());
         return pluginModules;
     }
 

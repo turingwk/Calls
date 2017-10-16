@@ -54,91 +54,6 @@ public class RongCallKit {
     }
 
     /**
-     * 发起多人通话
-     *
-     * @param context          上下文
-     * @param conversationType 会话类型
-     * @param targetId         会话 id
-     * @param mediaType        会话媒体类型
-     * @param userIds          参与者 id 列表
-     */
-    public static void startMultiCall(Context context, Conversation.ConversationType conversationType, String targetId, CallMediaType mediaType, ArrayList<String> userIds) {
-        if (checkEnvironment(context, mediaType)) {
-            String action;
-            if (mediaType.equals(CallMediaType.CALL_MEDIA_TYPE_AUDIO)) {
-                action = RongVoIPIntent.RONG_INTENT_ACTION_VOIP_MULTIAUDIO;
-            } else {
-                action = RongVoIPIntent.RONG_INTENT_ACTION_VOIP_MULTIVIDEO;
-            }
-
-            Intent intent = new Intent(action);
-            userIds.add(RongIMClient.getInstance().getCurrentUserId());
-            intent.putExtra("conversationType", conversationType.getName().toLowerCase());
-            intent.putExtra("targetId", targetId);
-            intent.putExtra("callAction", RongCallAction.ACTION_OUTGOING_CALL.getName());
-            intent.setPackage(context.getPackageName());
-            intent.putStringArrayListExtra("invitedUsers", userIds);
-            context.startActivity(intent);
-        }
-    }
-
-
-    /**
-     * 开始多人通话。
-     * 返回当前会话用户列表提供者对象，用户拿到该对象后，异步从服务器取出当前会话用户列表后，
-     * 调用提供者中的 onGotUserList 方法，填充 ArrayList<String> userIds 后，就会自动发起多人通话。
-     *
-     * @param context          上下文
-     * @param conversationType 会话类型
-     * @param targetId         会话 id
-     * @param mediaType        通话的媒体类型：CALL_MEDIA_TYPE_AUDIO， CALL_MEDIA_TYPE_VIDEO
-     * @return 返回当前会话用户列表提供者对象
-     */
-    public static ICallUsersProvider startMultiCall(final Context context, final Conversation.ConversationType conversationType, final String targetId, final CallMediaType mediaType) {
-        return new ICallUsersProvider() {
-            @Override
-            public void onGotUserList(ArrayList<String> userIds) {
-                String action;
-                if (mediaType.equals(CallMediaType.CALL_MEDIA_TYPE_AUDIO)) {
-                    action = RongVoIPIntent.RONG_INTENT_ACTION_VOIP_MULTIAUDIO;
-                } else {
-                    action = RongVoIPIntent.RONG_INTENT_ACTION_VOIP_MULTIVIDEO;
-                }
-                Intent intent = new Intent(action);
-                userIds.add(RongIMClient.getInstance().getCurrentUserId());
-                intent.putExtra("conversationType", conversationType.getName().toLowerCase());
-                intent.putExtra("targetId", targetId);
-                intent.putExtra("callAction", RongCallAction.ACTION_OUTGOING_CALL.getName());
-                intent.setPackage(context.getPackageName());
-                intent.putStringArrayListExtra("invitedUsers", userIds);
-                context.startActivity(intent);
-            }
-        };
-    }
-
-    /**
-     * 发起的多人通话，不依赖群、讨论组等
-     *
-     * @param context
-     * @param mediaType
-     * @return
-     */
-    public static void startMultiCall(final Context context, ArrayList<String> userIds, final CallMediaType mediaType) {
-        String action;
-        if (mediaType.equals(CallMediaType.CALL_MEDIA_TYPE_AUDIO)) {
-            action = RongVoIPIntent.RONG_INTENT_ACTION_VOIP_MULTIAUDIO;
-        } else {
-            action = RongVoIPIntent.RONG_INTENT_ACTION_VOIP_MULTIVIDEO;
-        }
-        Intent intent = new Intent(action);
-        userIds.add(RongIMClient.getInstance().getCurrentUserId());
-        intent.putExtra("conversationType", Conversation.ConversationType.NONE.getName().toLowerCase());
-        intent.putExtra("callAction", RongCallAction.ACTION_OUTGOING_CALL.getName());
-        intent.putStringArrayListExtra("invitedUsers", userIds);
-        context.startActivity(intent);
-    }
-
-    /**
      * 检查应用音视频授权信息
      * 检查网络连接状态
      * 检查是否在通话中
@@ -209,7 +124,7 @@ public class RongCallKit {
 
     /**
      * <p>设置群组成员的提供者。</p>
-     * <p>设置后，当 {@link CallSelectMemberActivity} 界面展示群组成员时，会回调 {@link GroupMembersProvider#getMemberList(String, OnGroupMembersResult)}，
+     * <p>设置后，当 {CallSelectMemberActivity} 界面展示群组成员时，会回调 {@link GroupMembersProvider#getMemberList(String, OnGroupMembersResult)}，
      * 使用者只需要根据对应的 groupId 提供对应的群组成员。
      * 如果需要异步从服务器获取群组成员，使用者可以在此方法中发起异步请求，然后返回 null 信息。
      * 在异步请求结果返回后，根据返回的结果调用 {@link RongCallKit.OnGroupMembersResult#onGotMemberList(ArrayList)}  刷新信息。</p>

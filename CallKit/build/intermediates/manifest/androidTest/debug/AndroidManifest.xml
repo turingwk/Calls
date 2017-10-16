@@ -78,7 +78,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="io.rong.callkit.CallSelectMemberActivity" />
         <activity android:name="io.rong.imkit.plugin.location.AMapLocationActivity" />
         <activity android:name="io.rong.imkit.plugin.location.AMapPreviewActivity" />
         <activity android:name="io.rong.imkit.plugin.location.AMapRealTimeActivity" />
