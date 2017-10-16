@@ -37,10 +37,7 @@ import io.rong.imageloader.core.listener.ImageLoadingProgressListener;
 import io.rong.imkit.R.bool;
 import io.rong.imkit.R.string;
 import io.rong.imkit.manager.AudioRecordManager;
-import io.rong.imkit.manager.IUnReadMessageObserver;
 import io.rong.imkit.manager.InternalModuleManager;
-import io.rong.imkit.manager.SendImageManager;
-import io.rong.imkit.manager.UnReadMessageManager;
 import io.rong.imkit.mention.RongMentionManager;
 import io.rong.imkit.model.ConversationKey;
 import io.rong.imkit.model.Event.AddMemberToDiscussionEvent;
@@ -78,7 +75,6 @@ import io.rong.imkit.model.Event.SyncReadStatusEvent;
 import io.rong.imkit.model.GroupUserInfo;
 import io.rong.imkit.model.UIConversation;
 import io.rong.imkit.notification.MessageNotificationManager;
-import io.rong.imkit.plugin.image.AlbumBitmapCacheHelper;
 import io.rong.imkit.userInfoCache.RongUserInfoManager;
 import io.rong.imkit.utils.SystemUtils;
 import io.rong.imkit.widget.provider.CSPullLeaveMsgItemProvider;
@@ -170,10 +166,6 @@ public class RongIM {
                     RongIM.sConnectionStatusListener.onChanged(status);
                 }
 
-                if(status.equals(ConnectionStatus.DISCONNECTED)) {
-                    SendImageManager.getInstance().reset();
-                }
-
                 if(status.equals(ConnectionStatus.CONNECTED) && !RongIM.notificationQuiteHoursConfigured) {
                     RongIM.SingletonHolder.sRongIM.getNotificationQuietHours((GetNotificationQuietHoursCallback)null);
                 }
@@ -242,7 +234,6 @@ public class RongIM {
             RongExtensionManager.getInstance().registerExtensionModule(new DefaultExtensionModule());
             InternalModuleManager.init(context);
             InternalModuleManager.getInstance().onInitialized(RongIM.SingletonHolder.sRongIM.mAppKey);
-            AlbumBitmapCacheHelper.init(context);
         }
     }
 
@@ -452,7 +443,6 @@ public class RongIM {
             RongContext.getInstance().clearConversationNotifyStatusCache();
             RongIMClient.getInstance().logout();
             RongUserInfoManager.getInstance().uninit();
-            UnReadMessageManager.getInstance().clearObserver();
             RongExtensionManager.getInstance().disconnect();
             notificationQuiteHoursConfigured = false;
             MessageNotificationManager.getInstance().clearNotificationQuietHours();
@@ -749,36 +739,6 @@ public class RongIM {
 
     }
 
-    /** @deprecated */
-    @Deprecated
-    public void setOnReceiveUnreadCountChangedListener(final RongIM.OnReceiveUnreadCountChangedListener listener, ConversationType... conversationTypes) {
-        if(listener != null && conversationTypes != null && conversationTypes.length != 0) {
-            UnReadMessageManager.getInstance().addObserver(conversationTypes, new IUnReadMessageObserver() {
-                public void onCountChanged(int count) {
-                    listener.onMessageIncreased(count);
-                }
-            });
-        } else {
-            RLog.w(TAG, "setOnReceiveUnreadCountChangedListener Illegal argument");
-        }
-    }
-
-    public void addUnReadMessageCountChangedObserver(IUnReadMessageObserver observer, ConversationType... conversationTypes) {
-        if(observer != null && conversationTypes != null && conversationTypes.length != 0) {
-            UnReadMessageManager.getInstance().addObserver(conversationTypes, observer);
-        } else {
-            RLog.w(TAG, "addOnReceiveUnreadCountChangedListener Illegal argument");
-            throw new IllegalArgumentException("observer must not be null and must include at least one conversationType");
-        }
-    }
-
-    public void removeUnReadMessageCountChangedObserver(IUnReadMessageObserver observer) {
-        if(observer == null) {
-            RLog.w(TAG, "removeOnReceiveUnreadCountChangedListener Illegal argument");
-        } else {
-            UnReadMessageManager.getInstance().removeObserver(observer);
-        }
-    }
 
     public void startPublicServiceProfile(Context context, ConversationType conversationType, String targetId) {
         if(context != null && conversationType != null && !TextUtils.isEmpty(targetId)) {
