@@ -29,9 +29,7 @@ import io.rong.calllib.RongCallSession;
 import io.rong.calllib.message.CallSTerminateMessage;
 import io.rong.common.RLog;
 import io.rong.imkit.RongContext;
-import io.rong.imkit.RongIM;
 import io.rong.imkit.utils.NotificationUtil;
-import io.rong.imlib.model.Conversation;
 import io.rong.message.InformationNotificationMessage;
 
 /**
@@ -161,16 +159,16 @@ public class CallFloatBoxView {
                             callSTerminateMessage.setReason(reason);
                             callSTerminateMessage.setMediaType(callProfile.getMediaType());
                             callSTerminateMessage.setExtra(extra);
-                            if (senderId.equals(callProfile.getSelfUserId())) {
-                                callSTerminateMessage.setDirection("MO");
-                                RongIM.getInstance().insertOutgoingMessage(Conversation.ConversationType.PRIVATE, callProfile.getTargetId(),
-                                        io.rong.imlib.model.Message.SentStatus.SENT, callSTerminateMessage, null);
-                            } else {
-                                callSTerminateMessage.setDirection("MT");
-                                io.rong.imlib.model.Message.ReceivedStatus receivedStatus = new io.rong.imlib.model.Message.ReceivedStatus(0);
-                                RongIM.getInstance().insertIncomingMessage(Conversation.ConversationType.PRIVATE, callProfile.getTargetId(),
-                                        senderId, receivedStatus, callSTerminateMessage, null);
-                            }
+//                            if (senderId.equals(callProfile.getSelfUserId())) {
+//                                callSTerminateMessage.setDirection("MO");
+//                                RongIM.getInstance().insertOutgoingMessage(Conversation.ConversationType.PRIVATE, callProfile.getTargetId(),
+//                                        io.rong.imlib.model.Message.SentStatus.SENT, callSTerminateMessage, null);
+//                            } else {
+//                                callSTerminateMessage.setDirection("MT");
+//                                io.rong.imlib.model.Message.ReceivedStatus receivedStatus = new io.rong.imlib.model.Message.ReceivedStatus(0);
+//                                RongIM.getInstance().insertIncomingMessage(Conversation.ConversationType.PRIVATE, callProfile.getTargetId(),
+//                                        senderId, receivedStatus, callSTerminateMessage, null);
+//                            }
                             break;
                         case GROUP:
                             InformationNotificationMessage informationNotificationMessage;
@@ -180,14 +178,14 @@ public class CallFloatBoxView {
                                 informationNotificationMessage = InformationNotificationMessage.obtain(RongContext.getInstance().getString(R.string.rc_voip_audio_ended));
                             }
 
-                            if (senderId.equals(callProfile.getSelfUserId())) {
-                                RongIM.getInstance().insertOutgoingMessage(Conversation.ConversationType.GROUP, callProfile.getTargetId(),
-                                        io.rong.imlib.model.Message.SentStatus.SENT, informationNotificationMessage, null);
-                            } else {
-                                io.rong.imlib.model.Message.ReceivedStatus receivedStatus = new io.rong.imlib.model.Message.ReceivedStatus(0);
-                                RongIM.getInstance().insertIncomingMessage(Conversation.ConversationType.GROUP, callProfile.getTargetId(),
-                                        senderId, receivedStatus, informationNotificationMessage, null);
-                            }
+//                            if (senderId.equals(callProfile.getSelfUserId())) {
+//                                RongIM.getInstance().insertOutgoingMessage(Conversation.ConversationType.GROUP, callProfile.getTargetId(),
+//                                        io.rong.imlib.model.Message.SentStatus.SENT, informationNotificationMessage, null);
+//                            } else {
+//                                io.rong.imlib.model.Message.ReceivedStatus receivedStatus = new io.rong.imlib.model.Message.ReceivedStatus(0);
+//                                RongIM.getInstance().insertIncomingMessage(Conversation.ConversationType.GROUP, callProfile.getTargetId(),
+//                                        senderId, receivedStatus, informationNotificationMessage, null);
+//                            }
                             break;
                         default:
                             break;

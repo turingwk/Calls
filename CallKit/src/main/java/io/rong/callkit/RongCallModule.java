@@ -11,7 +11,6 @@ import io.rong.calllib.RongCallClient;
 import io.rong.calllib.RongCallCommon;
 import io.rong.calllib.RongCallSession;
 import io.rong.common.RLog;
-import io.rong.imkit.RongIM;
 import io.rong.imkit.manager.IExternalModule;
 import io.rong.imkit.plugin.IPluginModule;
 import io.rong.imlib.model.Conversation;
@@ -32,7 +31,7 @@ public class RongCallModule implements IExternalModule {
 
     @Override
     public void onInitialized(String appKey) {
-        RongIM.registerMessageTemplate(new CallEndMessageItemProvider());
+
     }
 
     @Override

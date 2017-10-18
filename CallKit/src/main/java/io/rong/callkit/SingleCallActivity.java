@@ -27,8 +27,6 @@ import io.rong.calllib.RongCallCommon;
 import io.rong.calllib.RongCallSession;
 import io.rong.calllib.message.CallSTerminateMessage;
 import io.rong.common.RLog;
-import io.rong.imkit.RongContext;
-import io.rong.imkit.RongIM;
 import io.rong.imkit.utilities.PermissionCheckUtil;
 import io.rong.imkit.widget.AsyncImageView;
 import io.rong.imlib.RongIMClient;
@@ -236,18 +234,9 @@ public class SingleCallActivity extends BaseCallActivity implements Handler.Call
         } else if (mediaType.equals(RongCallCommon.CallMediaType.VIDEO)) {
             handFree = true;
         }
+        AsyncImageView userPortrait = (AsyncImageView) mUserInfoContainer.findViewById(R.id.rc_voip_user_portrait);
+        userPortrait.setResource("", R.drawable.rc_default_portrait);
 
-        UserInfo userInfo = RongContext.getInstance().getUserInfoFromCache(targetId);
-        if (userInfo != null) {
-            TextView userName = (TextView) mUserInfoContainer.findViewById(R.id.rc_voip_user_name);
-            userName.setText(userInfo.getName());
-            if (mediaType.equals(RongCallCommon.CallMediaType.AUDIO)) {
-                AsyncImageView userPortrait = (AsyncImageView) mUserInfoContainer.findViewById(R.id.rc_voip_user_portrait);
-                if (userPortrait != null && userInfo.getPortraitUri() != null) {
-                    userPortrait.setResource(userInfo.getPortraitUri().toString(), R.drawable.rc_default_portrait);
-                }
-            }
-        }
 
         createPowerManager();
         createPickupDetector();
@@ -448,17 +437,9 @@ public class SingleCallActivity extends BaseCallActivity implements Handler.Call
 
         mUserInfoContainer.removeAllViews();
         mUserInfoContainer.addView(userInfoView);
-        UserInfo userInfo = RongContext.getInstance().getUserInfoFromCache(targetId);
-        if (userInfo != null) {
-            TextView userName = (TextView) mUserInfoContainer.findViewById(R.id.rc_voip_user_name);
-            userName.setText(userInfo.getName());
-            if (callSession.getMediaType().equals(RongCallCommon.CallMediaType.AUDIO)) {
-                AsyncImageView userPortrait = (AsyncImageView) mUserInfoContainer.findViewById(R.id.rc_voip_user_portrait);
-                if (userPortrait != null) {
-                    userPortrait.setAvatar(userInfo.getPortraitUri().toString(), R.drawable.rc_default_portrait);
-                }
-            }
-        }
+        AsyncImageView userPortrait = (AsyncImageView) mUserInfoContainer.findViewById(R.id.rc_voip_user_portrait);
+        userPortrait.setAvatar("", R.drawable.rc_default_portrait);
+
         mUserInfoContainer.setVisibility(View.VISIBLE);
         mUserInfoContainer.findViewById(R.id.rc_voip_call_minimize).setVisibility(View.VISIBLE);
 
@@ -577,11 +558,9 @@ public class SingleCallActivity extends BaseCallActivity implements Handler.Call
             message.setExtra(extra);
             if (senderId.equals(callSession.getSelfUserId())) {
                 message.setDirection("MO");
-                RongIM.getInstance().insertOutgoingMessage(Conversation.ConversationType.PRIVATE, callSession.getTargetId(), io.rong.imlib.model.Message.SentStatus.SENT, message, null);
             } else {
                 message.setDirection("MT");
                 io.rong.imlib.model.Message.ReceivedStatus receivedStatus = new io.rong.imlib.model.Message.ReceivedStatus(0);
-                RongIM.getInstance().insertIncomingMessage(Conversation.ConversationType.PRIVATE, callSession.getTargetId(), senderId, receivedStatus, message, null);
             }
         }
         postRunnableDelay(new Runnable() {
@@ -607,17 +586,9 @@ public class SingleCallActivity extends BaseCallActivity implements Handler.Call
         inflater = LayoutInflater.from(this);
         initView(mediaType, callAction);
         targetId = callSession.getTargetId();
-        UserInfo userInfo = RongContext.getInstance().getUserInfoFromCache(targetId);
-        if (userInfo != null) {
-            TextView userName = (TextView) mUserInfoContainer.findViewById(R.id.rc_voip_user_name);
-            userName.setText(userInfo.getName());
-            if (mediaType.equals(RongCallCommon.CallMediaType.AUDIO)) {
-                AsyncImageView userPortrait = (AsyncImageView) mUserInfoContainer.findViewById(R.id.rc_voip_user_portrait);
-                if (userPortrait != null) {
-                    userPortrait.setAvatar(userInfo.getPortraitUri().toString(), R.drawable.rc_default_portrait);
-                }
-            }
-        }
+        AsyncImageView userPortrait = (AsyncImageView) mUserInfoContainer.findViewById(R.id.rc_voip_user_portrait);
+        userPortrait.setAvatar("", R.drawable.rc_default_portrait);
+
         SurfaceView localVideo = null;
         SurfaceView remoteVideo = null;
         String remoteUserId = null;

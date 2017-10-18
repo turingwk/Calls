@@ -96,7 +96,7 @@ public class RongExtensionManager {
         return mExtModules;
     }
 
-    void connect(String token) {
+    public void connect(String token) {
         Iterator var2 = mExtModules.iterator();
 
         while(var2.hasNext()) {
@@ -106,7 +106,7 @@ public class RongExtensionManager {
 
     }
 
-    void disconnect() {
+    public void disconnect() {
         if(mExtModules != null) {
             Iterator var1 = mExtModules.iterator();
 
