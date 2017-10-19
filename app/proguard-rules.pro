@@ -15,3 +15,14 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+-keep class io.rong.** {*;}
+-keep class io.agora.** {*;}
+-dontwarn com.xiaomi.**
+-dontwarn com.huawei.**
+-dontwarn com.google.**
+-dontwarn io.rong.**
+-dontwarn ly.count.**
+-dontwarn org.openudid.**
+
+
