@@ -7,16 +7,13 @@ package io.rong.imkit;
 
 import android.content.Context;
 import android.content.ContextWrapper;
-import android.location.LocationProvider;
 import android.os.Handler;
 import android.text.TextUtils;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -31,12 +28,8 @@ import io.rong.imageloader.core.ImageLoaderConfiguration;
 import io.rong.imageloader.core.ImageLoaderConfiguration.Builder;
 import io.rong.imageloader.utils.L;
 import io.rong.imageloader.utils.StorageUtils;
-import io.rong.imkit.model.ConversationProviderTag;
-import io.rong.imkit.model.ProviderTag;
 import io.rong.imkit.utils.RongAuthImageDownloader;
 import io.rong.imlib.model.Conversation.ConversationType;
-import io.rong.imlib.model.MessageContent;
-import io.rong.imlib.model.UserInfo;
 
 public class RongContext extends ContextWrapper {
     private static final String TAG = "RongContext";
@@ -44,16 +37,9 @@ public class RongContext extends ContextWrapper {
     private static RongContext sContext;
     private EventBus mBus = EventBus.getDefault();
     private ExecutorService executorService;
-    private Map<Class<? extends MessageContent>, ProviderTag> mProviderMap = new HashMap();
-    private Map<String, ConversationProviderTag> mConversationTagMap = new HashMap();
     private List<ConversationType> mReadReceiptConversationTypeList = new ArrayList();
-    private LocationProvider mLocationProvider;
     private List<String> mCurrentConversationList = new ArrayList();
     Handler mHandler = new Handler(this.getMainLooper());
-    private UserInfo mCurrentUserInfo;
-    private boolean isUserInfoAttached;
-    private boolean isShowUnreadMessageState;
-    private boolean isShowNewMessageState;
 
     public static void init(Context context) {
         if(sContext == null) {
@@ -70,7 +56,6 @@ public class RongContext extends ContextWrapper {
         super(base);
         this.mReadReceiptConversationTypeList.add(ConversationType.PRIVATE);
         this.executorService = Executors.newSingleThreadExecutor();
-        RongNotificationManager.getInstance().init(this);
         ImageLoader.getInstance().init(this.getDefaultConfig(this.getApplicationContext()));
     }
 

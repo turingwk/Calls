@@ -26,8 +26,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 import io.rong.calllib.IRongCallListener;
 import io.rong.calllib.RongCallClient;
@@ -195,9 +193,6 @@ public class BaseCallActivity extends Activity implements IRongCallListener, Pic
 
     @Override
     public void onCallDisconnected(RongCallSession callProfile, RongCallCommon.CallDisconnectedReason reason) {
-        if (RongCallKit.getCustomerHandlerListener() != null) {
-            RongCallKit.getCustomerHandlerListener().onCallDisconnected(callProfile, reason);
-        }
         shouldShowFloat = false;
 
         String text = null;
@@ -241,9 +236,7 @@ public class BaseCallActivity extends Activity implements IRongCallListener, Pic
 
     @Override
     public void onRemoteUserInvited(String userId, RongCallCommon.CallMediaType mediaType) {
-        if (RongCallKit.getCustomerHandlerListener() != null) {
-            RongCallKit.getCustomerHandlerListener().onRemoteUserInvited(userId, mediaType);
-        }
+
     }
 
     @Override
@@ -267,9 +260,6 @@ public class BaseCallActivity extends Activity implements IRongCallListener, Pic
 
     @Override
     public void onCallConnected(RongCallSession callProfile, SurfaceView localVideo) {
-        if (RongCallKit.getCustomerHandlerListener() != null) {
-            RongCallKit.getCustomerHandlerListener().onCallConnected(callProfile, localVideo);
-        }
         shouldShowFloat = true;
     }
 
@@ -318,11 +308,6 @@ public class BaseCallActivity extends Activity implements IRongCallListener, Pic
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         shouldRestoreFloat = false;
-        if (RongCallKit.getCustomerHandlerListener() != null) {
-            List<String> selectedUserIds = RongCallKit.getCustomerHandlerListener().handleActivityResult(requestCode, resultCode, data);
-            if (selectedUserIds != null && selectedUserIds.size() > 0)
-                onAddMember(selectedUserIds);
-        }
     }
 
     @Override
@@ -340,17 +325,6 @@ public class BaseCallActivity extends Activity implements IRongCallListener, Pic
 
     public void onRestoreFloatBox(Bundle bundle) {
 
-    }
-
-    protected void addMember(ArrayList<String> currentMemberIds) {
-        // do your job to add more member
-        // after got your new member, call onAddMember
-        if (RongCallKit.getCustomerHandlerListener() != null) {
-            RongCallKit.getCustomerHandlerListener().addMember(this, currentMemberIds);
-        }
-    }
-
-    protected void onAddMember(List<String> newMemberIds) {
     }
 
     public String onSaveFloatBoxState(Bundle bundle) {

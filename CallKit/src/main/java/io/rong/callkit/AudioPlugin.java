@@ -32,10 +32,6 @@ public class AudioPlugin implements IPluginModule {
     private Conversation.ConversationType conversationType;
     private String targetId;
 
-    @Override
-    public Drawable obtainDrawable(Context context) {
-        return context.getResources().getDrawable(R.drawable.rc_ic_phone_selector);
-    }
 
     @Override
     public String obtainTitle(Context context) {
