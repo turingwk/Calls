@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import io.rong.callkit.RongCallKit;
 import io.rong.imkit.RongContext;
@@ -15,6 +16,7 @@ import io.rong.imlib.RongIMClient;
 public class MainActivity extends Activity {
     boolean is156 = false;
     Button btn;
+    Button btnDisconnect;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +30,14 @@ public class MainActivity extends Activity {
                 } else {
                     RongCallKit.startSingleCall(MainActivity.this, "15652924953", RongCallKit.CallMediaType.CALL_MEDIA_TYPE_AUDIO);
                 }
+            }
+        });
+        btnDisconnect = findViewById(R.id.btn_disconnect);
+        btnDisconnect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "断开", Toast.LENGTH_SHORT).show();
+                RongIMClient.getInstance().logout();
             }
         });
         connect();
