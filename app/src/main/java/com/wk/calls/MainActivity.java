@@ -14,7 +14,7 @@ import io.rong.imkit.model.Event;
 import io.rong.imlib.RongIMClient;
 
 public class MainActivity extends Activity {
-    boolean is156 = false;
+    boolean is156 = true;
     Button btn;
     Button btnDisconnect;
     @Override
