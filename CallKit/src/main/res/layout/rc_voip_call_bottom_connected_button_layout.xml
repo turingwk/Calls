@@ -53,32 +53,6 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/rc_voip_camera"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right|bottom"
-        android:layout_marginRight="20dp"
-        android:visibility="gone">
-
-        <ImageView
-            android:id="@+id/rc_voip_camera_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:onClick="onSwitchCameraClick"
-            android:src="@drawable/rc_voip_camera" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/rc_voip_camera_btn"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="12dp"
-            android:text="@string/rc_voip_camera"
-            style="@style/rc_voip_text_style_style" />
-    </RelativeLayout>
-
-    <RelativeLayout
         android:id="@+id/rc_voip_handfree"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

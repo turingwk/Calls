@@ -12,7 +12,6 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -287,8 +286,6 @@ public class SingleCallActivity extends BaseCallActivity implements Handler.Call
                 TextView callInfo = (TextView) userInfoLayout.findViewById(R.id.rc_voip_call_remind_info);
                 callInfo.setText(R.string.rc_voip_video_call_inviting);
                 onIncomingCallRinging();
-                ImageView answerV = (ImageView) buttonLayout.findViewById(R.id.rc_voip_call_answer_btn);
-                answerV.setImageResource(R.drawable.rc_voip_vedio_answer_selector);
             }
         }
         mButtonContainer.removeAllViews();
@@ -490,7 +487,6 @@ public class SingleCallActivity extends BaseCallActivity implements Handler.Call
         FrameLayout btnLayout = (FrameLayout) inflater.inflate(R.layout.rc_voip_call_bottom_connected_button_layout, null);
         btnLayout.findViewById(R.id.rc_voip_call_mute).setSelected(muted);
         btnLayout.findViewById(R.id.rc_voip_handfree).setVisibility(View.GONE);
-        btnLayout.findViewById(R.id.rc_voip_camera).setVisibility(View.VISIBLE);
         mButtonContainer.removeAllViews();
         mButtonContainer.addView(btnLayout);
         View view = findViewById(R.id.rc_voip_audio_chat);
